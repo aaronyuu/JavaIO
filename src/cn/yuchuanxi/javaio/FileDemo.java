@@ -1,4 +1,4 @@
-package cn.yuchuanxi.javaio;
+ï»¿package cn.yuchuanxi.javaio;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,16 +23,16 @@ public class FileDemo {
 	 */
 	public static void main(String[] args) throws IOException {
 		/**
-		 * File file1=new File("ÎÄ¼şÂ·¾¶");
-		 * ÎÄ¼şÂ·¾¶¿ÉÒÔÊÇÏà¶ÔÂ·¾¶,Ò²¿ÉÒÔÊÇ¾ø¶ÔÂ·¾¶.Èç new File("c:\\abc\\123.mp3")
-		 * ÒòÎª"\"ÊÇ×ªÒâ×Ö·û,Òò´ËÒªÓÃÁ½¸ö"\\"
+		 * File file1=new File("æ–‡ä»¶è·¯å¾„");
+		 * æ–‡ä»¶è·¯å¾„å¯ä»¥æ˜¯ç›¸å¯¹è·¯å¾„,ä¹Ÿå¯ä»¥æ˜¯ç»å¯¹è·¯å¾„.å¦‚ new File("c:\\abc\\123.mp3")
+		 * å› ä¸º"\"æ˜¯è½¬æ„å­—ç¬¦,å› æ­¤è¦ç”¨ä¸¤ä¸ª"\\"
 		 */
 			File file=new File("aa.dat");
 			
 			/**
-			 * Èç¹û²»´æÔÚ,ÏÈ´´½¨ÎÄ¼ş,
-			 * Èç¹ûÒÑ¾­´æÔÚ,ÏÈÉ¾³ı,ÔÙ´´½¨ÎÄ¼ş.
-			 * ±ÜÃâ¶Áµ½´íÎóÊı¾İ.
+			 * å¦‚æœä¸å­˜åœ¨,å…ˆåˆ›å»ºæ–‡ä»¶,
+			 * å¦‚æœå·²ç»å­˜åœ¨,å…ˆåˆ é™¤,å†åˆ›å»ºæ–‡ä»¶.
+			 * é¿å…è¯»åˆ°é”™è¯¯æ•°æ®.
 			 */
 			if (!file.exists()){
 				file.createNewFile();
@@ -43,7 +43,7 @@ public class FileDemo {
 			
 			
 			/**
-			 * RandomAccessFile(file, "rw") ÓĞ¶Á/Ğ´µÄ·½·¨
+			 * RandomAccessFile(file, "rw") æœ‰è¯»/å†™çš„æ–¹æ³•
 			 *  FileOutputStream(file)
 			 *  FileInputStream(file)
 			 *  FileWriter(file)
@@ -54,28 +54,28 @@ public class FileDemo {
 			RandomAccessFile raf= new RandomAccessFile(file, "rw");
 			raf.write('b');
 			/**
-			 * Ğ´ÈëÍêÖ®ºógetFilePointerÖ¸µ½1µÄÎ»ÖÃ,
-			 * ÔÚ¶ÁÖ®Ç°ÒªÏÈ»Øµ½0µÄÎ»ÖÃ,
-			 * Ê¹ÓÃseek(0)»Øµ½0Î»ÖÃ.
+			 * å†™å…¥å®Œä¹‹ågetFilePointeræŒ‡åˆ°1çš„ä½ç½®,
+			 * åœ¨è¯»ä¹‹å‰è¦å…ˆå›åˆ°0çš„ä½ç½®,
+			 * ä½¿ç”¨seek(0)å›åˆ°0ä½ç½®.
 			 */
-			System.out.println("Ğ´ÈëÍêÒ»¸ö×Ö·ûºóµÄÎ»ÖÃ:"+raf.getFilePointer());
+			System.out.println("å†™å…¥å®Œä¸€ä¸ªå­—ç¬¦åçš„ä½ç½®:"+raf.getFilePointer());
 			raf.seek(0);
-			System.out.println("Seek(0)Ö®ºó µÄÎ»ÖÃ:"+raf.getFilePointer());
+			System.out.println("Seek(0)ä¹‹å çš„ä½ç½®:"+raf.getFilePointer());
 			int r=raf.read();
 			char c=(char)r;
-			System.out.println("¶Áµ½µÄÊ®½øÖÆÊı¾İ"+r+",×ª»»³É×Ö·û"+c);
+			System.out.println("è¯»åˆ°çš„åè¿›åˆ¶æ•°æ®"+r+",è½¬æ¢æˆå­—ç¬¦"+c);
 			raf.close();
 			
 			
 			FileOutputStream fos=new FileOutputStream(file);
 			fos.write("a".getBytes());
-			fos.write("ÖĞÎÄÊÔÊÔ".getBytes());
+			fos.write("ä¸­æ–‡è¯•è¯•".getBytes());
 			/**
-			 * getBytes("GBK") ,ÀàĞÍÒªºÍµ±Ç°ÎÄ±¾µÄ×Ö·û±àÂë¸ñÊ½Ò»ÖÂ.
-			 * ±¾ÀıÖĞ,getBytes("utf-16be")ÊÇÂÒÂë.
+			 * getBytes("GBK") ,ç±»å‹è¦å’Œå½“å‰æ–‡æœ¬çš„å­—ç¬¦ç¼–ç æ ¼å¼ä¸€è‡´.
+			 * æœ¬ä¾‹ä¸­,getBytes("utf-16be")æ˜¯ä¹±ç .
 			 */
-			fos.write("ÖĞÎÄÊÔÊÔUTF-16be".getBytes("utf-16be"));
-			fos.write("ÖĞÎÄÊÔÊÔGBK".getBytes("gbk"));
+			fos.write("ä¸­æ–‡è¯•è¯•UTF-8".getBytes("utf-8"));
+			fos.write("ä¸­æ–‡è¯•è¯•GBK".getBytes("gbk"));
 			fos.close();
 			
 			
@@ -87,27 +87,34 @@ public class FileDemo {
 			fis.close();
 			
 			FileWriter fw=new FileWriter(file);
-			fw.write("hahaa²âÊÔÖĞÎÄ,");
+			fw.write("hahaaæµ‹è¯•ä¸­æ–‡,");
 			BufferedWriter bw=new BufferedWriter(fw);
-			bw.write("²âÊÔBufferedWriter");
+			bw.write("æµ‹è¯•BufferedWriter");
 			/**
-			 * Ê¹ÓÃBufferedWriter,±ØĞëÊ¹ÓÃflushË¢ĞÂ»º´æ.
+			 * ä½¿ç”¨BufferedWriter,å¿…é¡»ä½¿ç”¨flushåˆ·æ–°ç¼“å­˜.
 			 */
 			bw.flush();
 			/**
-			 * Ê¹ÓÃ¹Ø±ÕÒª¼ÇµÃ¹Ø±ÕÊäÈëÊä³öÁ÷,·ñÔò»áÓĞÎ´Öª´íÎó.
+			 * ä½¿ç”¨å…³é—­è¦è®°å¾—å…³é—­è¾“å…¥è¾“å‡ºæµ,å¦åˆ™ä¼šæœ‰æœªçŸ¥é”™è¯¯.
 			 */
 			fw.close();
 			bw.close();
 			
 			/**
-			 * ¶Á²Ù×÷
+			 * è¯»æ“ä½œ
 			 */
 			FileReader fr=new FileReader(file);
 			BufferedReader br=new BufferedReader(fr);
 			System.out.println(br.readLine());
-			
 			br.close();
+			fr.close();
+		
+			/**
+			 * æµ‹è¯•æ–‡å­—ç¼–ç è½¬æ¢
+			 */
+				 
+			 
+			 
 	
 			
 	}

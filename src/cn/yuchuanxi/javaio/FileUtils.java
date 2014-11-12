@@ -1,4 +1,4 @@
-package cn.yuchuanxi.javaio;
+ï»¿package cn.yuchuanxi.javaio;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,10 +15,10 @@ public class FileUtils {
 
 	public static void copyFileByByte(File from, File to) throws IOException {
 		if (!from.exists()) {
-			System.out.println("ÎÄ¼ş²»´æÔÚ");
+			System.out.println("æ–‡ä»¶ä¸å­˜åœ¨");
 		}
 		if (!from.exists()) {
-			System.out.println(from + "²»ÊÇÎÄ¼ş");
+			System.out.println(from + "ä¸æ˜¯æ–‡ä»¶");
 			// throw InterceptorOperations
 			// throw IORInterceptor;
 		}
@@ -39,10 +39,10 @@ public class FileUtils {
 
 	public static void copyFileByBytes(File from, File to) throws IOException {
 		if (!from.exists()) {
-			System.out.println("ÎÄ¼ş²»´æÔÚ");
+			System.out.println("æ–‡ä»¶ä¸å­˜åœ¨");
 		}
 		if (!from.exists()) {
-			System.out.println(from + "²»ÊÇÎÄ¼ş");
+			System.out.println(from + "ä¸æ˜¯æ–‡ä»¶");
 			// throw InterceptorOperations
 			// throw IORInterceptor;
 		}
@@ -62,11 +62,11 @@ public class FileUtils {
 	public static void copyFileByDataOutputStream(File from, File to)
 			throws IOException {
 		if (!from.exists()) {
-			throw new IllegalArgumentException("ÎÄ¼ş:" + from.getAbsolutePath()
-					+ "²»´æÔÚ");
+			throw new IllegalArgumentException("æ–‡ä»¶:" + from.getAbsolutePath()
+					+ "ä¸å­˜åœ¨");
 		}
 		if (!from.exists()) {
-			throw new IllegalArgumentException(from + "²»ÊÇÎÄ¼ş,¿ÉÄÜÊÇÎÄ¼ş¼Ğ");
+			throw new IllegalArgumentException(from + "ä¸æ˜¯æ–‡ä»¶,å¯èƒ½æ˜¯æ–‡ä»¶å¤¹");
 			// throw InterceptorOperations
 			// throw IORInterceptor;
 		}
@@ -87,11 +87,11 @@ public class FileUtils {
 	public static void copyFileByBufferedOutputStream(File from, File to)
 			throws IOException {
 		if (!from.exists()) {
-			throw new IllegalArgumentException("ÎÄ¼ş:" + from.getAbsolutePath()
-					+ "²»´æÔÚ");
+			throw new IllegalArgumentException("æ–‡ä»¶:" + from.getAbsolutePath()
+					+ "ä¸å­˜åœ¨");
 		}
 		if (!from.exists()) {
-			throw new IllegalArgumentException(from + "²»ÊÇÎÄ¼ş,¿ÉÄÜÊÇÎÄ¼ş¼Ğ");
+			throw new IllegalArgumentException(from + "ä¸æ˜¯æ–‡ä»¶,å¯èƒ½æ˜¯æ–‡ä»¶å¤¹");
 			// throw InterceptorOperations
 			// throw IORInterceptor;
 		}
@@ -110,25 +110,25 @@ public class FileUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨Ä¿Â¼ÏÂµÄÎÄ¼şÁĞ±í FileÀàĞÍµÄÄ¿Â¼ Ä¿Â¼
+	 * è·å–æŒ‡å®šç›®å½•ä¸‹çš„æ–‡ä»¶åˆ—è¡¨ Fileç±»å‹çš„ç›®å½• ç›®å½•
 	 */
 	public static void listFile(File dir) {
 		listFile(dir.toString());
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨Ä¿Â¼ÏÂµÄÎÄ¼şÁĞ±í
+	 * è·å–æŒ‡å®šç›®å½•ä¸‹çš„æ–‡ä»¶åˆ—è¡¨
 	 * 
 	 * @param dir
-	 *            Ä¿Â¼
+	 *            ç›®å½•
 	 */
 	public static void listFile(String dir) {
 
 		File file = new File(dir);
 		if (!file.exists()) {
-			System.out.println(dir + "²»´æÔÚ!");
+			System.out.println(dir + "ä¸å­˜åœ¨!");
 		} else if (!file.isDirectory()) {
-			System.out.println(dir + "²»ÊÇÄ¿Â¼");
+			System.out.println(dir + "ä¸æ˜¯ç›®å½•");
 		} else {
 			// String[] files=file.list();
 			// for (String string : files) {
@@ -148,7 +148,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * ¶ÁÎÄ¼ş
+	 * è¯»æ–‡ä»¶
 	 * 
 	 * @param file
 	 * @throws IOException
@@ -181,10 +181,10 @@ public class FileUtils {
 		System.out.println(c2);
 		int i = dis.readInt();
 		System.out.println(i);
-		// ÒÔ16½øÖÆÏÔÊ¾
+		// ä»¥16è¿›åˆ¶æ˜¾ç¤º
 		System.out.println(Integer.toHexString(i));
 
-		// ²é¿´ÊÇ·ñÖ§³Ömark/reset·½·¨
+		// æŸ¥çœ‹æ˜¯å¦æ”¯æŒmark/resetæ–¹æ³•
 		System.out.println(dis.markSupported());
 		// dis.reset();
 		//
@@ -230,41 +230,41 @@ public class FileUtils {
 
 		RandomAccessFile raf = new RandomAccessFile(file, "rw");
 		/**
-		 * Ğ´ÈëÕûĞÎÊı¾İ
+		 * å†™å…¥æ•´å½¢æ•°æ®
 		 */
 		int i = 0x7fff8ffe;
 		System.out.println(i);
 		raf.writeInt(i);
 
 		/**
-		 * Ğ´Èë×Ö·û´®
+		 * å†™å…¥å­—ç¬¦ä¸²
 		 */
 		String s = "China";
 		raf.writeBytes(s);
 
 		/**
-		 * Ğ´ÈëÖĞÎÄ
+		 * å†™å…¥ä¸­æ–‡
 		 */
 		raf.seek(0);
-		String s2 = "²âÊÔÖĞÎÄ";
+		String s2 = "æµ‹è¯•ä¸­æ–‡";
 		byte[] b2 = s2.getBytes("GBK");
 		raf.write(b2);
 
 		/**
-		 * ¶ÁÎÄ¼ş²âÊÔ ¶ÁÖ®Ç°ÏÈ½«Ö¸ÕëÒÆ¶¯µ½Í·²¿
+		 * è¯»æ–‡ä»¶æµ‹è¯• è¯»ä¹‹å‰å…ˆå°†æŒ‡é’ˆç§»åŠ¨åˆ°å¤´éƒ¨
 		 */
 		raf.seek(0);
 		String readline;
 		readline = raf.readLine();
 		System.out.println(readline);
 
-		// ÔÙ´Î¶ÁÖ®Ç°,»¹Òª°ÑÖ¸ÕëÒÆ¶¯µ½Í·²¿
+		// å†æ¬¡è¯»ä¹‹å‰,è¿˜è¦æŠŠæŒ‡é’ˆç§»åŠ¨åˆ°å¤´éƒ¨
 		raf.seek(0);
 		byte[] buf = new byte[(int) raf.length()];
 		raf.read(buf);
 		System.out.println(Arrays.toString(buf));
 
-		// ×îºóÒª¼ÇµÃ¹Ø±Õraf
+		// æœ€åè¦è®°å¾—å…³é—­raf
 		raf.close();
 	}
 
@@ -273,7 +273,7 @@ public class FileUtils {
 		// File file2 = new File("d:\\mulu");
 		//
 		// if (!file1.exists()) {
-		// System.out.println("¸ÃÎÄ¼ş²»´æÔÚ,ÏÖÔÚ´´½¨ÎÄ¼ş");
+		// System.out.println("è¯¥æ–‡ä»¶ä¸å­˜åœ¨,ç°åœ¨åˆ›å»ºæ–‡ä»¶");
 		// try {
 		// file1.createNewFile();
 		// } catch (IOException e) {
@@ -283,33 +283,33 @@ public class FileUtils {
 		// }
 		//
 		// if (file1.isDirectory()) {
-		// System.out.println(file1.getName() + "ÊÇÄ¿Â¼");
+		// System.out.println(file1.getName() + "æ˜¯ç›®å½•");
 		// } else if (file1.isFile()) {
-		// System.out.println(file1.getName() + "ÊÇÒ»¸öÎÄ¼ş");
+		// System.out.println(file1.getName() + "æ˜¯ä¸€ä¸ªæ–‡ä»¶");
 		// } else {
-		// System.out.println("ÎÄ¼ş²»´æÔÚ!!");
+		// System.out.println("æ–‡ä»¶ä¸å­˜åœ¨!!");
 		// }
 		//
 		// if (!file2.exists()) {
-		// System.out.println("¸ÃÎÄ¼ş²»´æÔÚ,ÏÖÔÚ´´½¨ÎÄ¼ş");
+		// System.out.println("è¯¥æ–‡ä»¶ä¸å­˜åœ¨,ç°åœ¨åˆ›å»ºæ–‡ä»¶");
 		// file2.mkdir();
 		// /**
-		// * ¶à¼¶Ä¿Â¼Ê¹ÓÃmkdirs()
+		// * å¤šçº§ç›®å½•ä½¿ç”¨mkdirs()
 		// */
 		// // file2.mkdirs();
 		// }
 		//
 		//
 		// /**
-		// * ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş¼Ğ
+		// * åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶å¤¹
 		// */
 		// System.out.println(file1.isDirectory());
 		// /**
-		// * ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş
+		// * åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶
 		// */
 		// System.out.println(file2.isFile());
 		// /**
-		// * É¾³ıÎÄ¼ş/ÎÄ¼ş¼Ğ
+		// * åˆ é™¤æ–‡ä»¶/æ–‡ä»¶å¤¹
 		// */
 		// file1.delete();
 		// System.out.println(file1);

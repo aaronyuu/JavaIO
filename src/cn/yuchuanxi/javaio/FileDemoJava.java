@@ -1,4 +1,4 @@
-package cn.yuchuanxi.javaio;
+锘縫ackage cn.yuchuanxi.javaio;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,10 +17,10 @@ public class FileDemoJava {
 		//
 		// File file2=new File("b.data");
 		// FileUtils.writefileByDataInputStream(file2);
-		// System.out.println("通过DataInputStream读取");
+		// System.out.println("閫氳繃DataInputStream璇诲彇");
 		// FileUtils.readfileByDataInputStream(file2);
 
-		// 测试文件拷贝
+		// 娴嬭瘯鏂囦欢鎷疯礉
 		File from = new File("D:\\JavaIO\\Halo.mp3");
 		File[] to = new File[] { new File("D:\\JavaIO\\1.mp3"),
 				new File("D:\\JavaIO\\2.mp3"), new File("D:\\JavaIO\\3.mp3"),
