@@ -12,7 +12,6 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.RandomAccessFile;
 
 public class FileDemo {
@@ -24,6 +23,7 @@ public class FileDemo {
 	 *  DataOutputStream(OutputStream out) 写/输出流
 	 * BufferedOutputStream
 	 * BufferedInputStream
+	 * OutputStreamWrite()
 	 *  FileWriter(file)
 	 *  FileReader(file)
 	 *  BufferedWriter(Writer out)  相比FileWrite(),好处是有缓存,减少磁盘写次数.
@@ -80,8 +80,8 @@ public class FileDemo {
 			 * getBytes("GBK") ,类型要和当前文本的字符编码格式一致.
 			 * 本例中,getBytes("gbk")是乱码.
 			 */
-			fos.write("中文试试UTF-8".getBytes("utf-8"));
-			fos.write("中文试试GBK".getBytes("gbk"));
+			fos.write("中文试试UTF-8\n".getBytes("utf-8"));
+			fos.write("中文试试GBK\n".getBytes("gbk"));
 			fos.close();
 			FileInputStream fis = new FileInputStream(file);
 			byte[] str1 = new byte[1024];
@@ -161,7 +161,7 @@ public class FileDemo {
 		
 		
 				 
-			 
+			IOUtils.OutputStreamWriteDemo(); 
 			 
 	
 			
