@@ -1,0 +1,14 @@
+			/**
+			 * RandomAccessFile(file, "rw") 有读/写的方法   最基础的读写类
+			 *  FileOutputStream(file)
+			 *  FileInputStream(file)
+			 *  DataOutputStream()
+			 *  DataOutputStream 写/输出流
+			 * BufferedOutputStream
+			 * BufferedInputStream
+			 *  FileWriter(file)
+			 *  FileReader(file)
+			 *  BufferedWriter(Writer out)  相比FileWrite(),好处是有缓存,减少磁盘写次数.
+			 *  BufferedReader(Reader in) 有个readLine()方法很实用
+			 *  
+			 */
